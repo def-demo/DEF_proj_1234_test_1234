@@ -1,0 +1,16 @@
+---
+timeouut: 180
+instances: 1
+memory: 512mb
+#buildpack: java-buildpack
+env:
+    SPRING_PROFILES_DEFAULT: cloud
+    #JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+applications:
+- name: DEF_proj_1234_test_1234-qe
+  #random-route: true
+  host: DEF_proj_1234_test_1234-qe
+  domain: cfapps.io
+ # path: target/demo-0.0.1-SNAPSHOT.war
+  path: ../build-output/demo-0.0.1-SNAPSHOT.war
+  services: []
